@@ -13,7 +13,7 @@ const Home = () => {
 
       {/* if data not empty then show */}
       {data.data.length > 0 && (
-        <div style={{ display: "flex" }}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <h1>Paula los resultados:</h1>
           <img src="https://i.imgur.com/Vm4XkMi.png" alt="" />
         </div>
@@ -21,15 +21,28 @@ const Home = () => {
       {data.data.map((item: any) => (
         <div
           style={{
+            display: "flex",
             background: "#fff",
-            borderBottom: "1px solid grey",
-            margin: ".5em 0",
+            borderBottom: "1px solid #f1f1f1",
+            boxShadow: "0 5px 10px #ccc",
+            margin: "0 auto",
+            padding: "1em",
+            maxWidth: "1200px",
+            marginBottom: ".5em",
           }}
           key={item.id}
         >
           <img src={item.thumbnail} alt={item.title} />
-          <p>{item.title}</p>
-          <h1>{item.price}</h1>
+          <div
+            style={{
+              borderLeft: "1px solid #f1f1f1",
+              paddingLeft: "1em",
+            }}
+            className="description"
+          >
+            <p>{item.title}</p>
+            <h1>{item.price}</h1>
+          </div>
         </div>
       ))}
     </>
