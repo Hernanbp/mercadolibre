@@ -85,11 +85,11 @@ const Carousel = () => {
             </>
           )}
           <div className="dots">
-            {images.map(({ id, active }) => (
+            {images.map(({ active }, index) => (
               <div
                 className={active ? "dot active" : "dot"}
-                onClick={() => showImage(id)}
-                key={id}
+                onClick={() => showImage(index)}
+                key={index}
               ></div>
             ))}
           </div>
