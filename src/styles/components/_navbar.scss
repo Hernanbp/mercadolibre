@@ -2,6 +2,7 @@
   height: 100px;
   width: 100%;
   background-color: $yellow;
+  box-shadow: 0 1px 1px 0 hsla(0, 0%, 0%, 0.12);
 
   .nav-bounds {
     display: flex;
