@@ -77,12 +77,8 @@ const Carousel = () => {
       .filter((image) => image.id !== index + 1)
       .map((image) => {
         image.active = false
-
         return image
       })
-
-    console.log(index)
-    console.log(images)
   }
 
   //autoplay

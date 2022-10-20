@@ -1,0 +1,77 @@
+.card {
+  width: 224px;
+  height: 330px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 hsla(0, 0%, 0%, 0.1);
+  border-radius: 4px;
+  transition: 0.1s ease-out;
+
+  &:hover {
+    height: auto;
+    max-height: 392px;
+    min-height: 330px;
+    box-shadow: 0px 37px 11px rgba(0, 0, 0, 0.01),
+      0px 8px 9px 8px rgba(0, 0, 0, 0.05), 0px 7px 7px rgba(0, 0, 0, 0.09),
+      0px 2px 4px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-img {
+    height: 224px;
+    width: 224px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  &:hover {
+    .card-content {
+      .card-title {
+        visibility: visible;
+        // opacity: 1;
+      }
+    }
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25em;
+    border-top: 1px solid #eee;
+    padding: 1em;
+
+    .card-price {
+      display: flex;
+      align-items: center;
+      font-size: 1.4rem;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      color: #000;
+      margin: 0;
+      gap: 0.5rem;
+    }
+    .price-discount {
+      font-size: 0.875rem;
+      color: $green;
+      vertical-align: 3px;
+      font-weight: 500;
+    }
+
+    .shipping {
+      font-size: 0.875rem;
+      color: $green;
+      font-weight: 600;
+    }
+
+    .card-title {
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: $grey;
+      margin: 0;
+      line-height: 1.3;
+      visibility: hidden;
+      //   opacity: 0;
+    }
+  }
+}
