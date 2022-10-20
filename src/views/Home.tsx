@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import Carousel from "../components/Carousel"
 import Navbar from "../components/Navbar"
+import Payment from "../components/Payment"
 import DataContext from "../context/DataContext"
 
 const Home = () => {
@@ -10,12 +11,12 @@ const Home = () => {
     <>
       <Navbar />
       <Carousel />
+      <Payment />
 
       {/* if data not empty then show */}
       {data.data.length > 0 && (
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <h1>Paula los resultados:</h1>
-          <img src="https://i.imgur.com/Vm4XkMi.png" alt="" />
+          <h1>resultados:</h1>
         </div>
       )}
       {data.data.map((item: any) => (
