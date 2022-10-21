@@ -1,4 +1,11 @@
-const PartnersCard = ({ image, badge, title, subtitle }: any) => {
+interface pCard {
+  image: string
+  badge: string
+  title: string
+  subtitle: string
+}
+
+const PartnersCard = ({ image, badge, title, subtitle }: pCard) => {
   return (
     <div className="partner-card">
       <div className="partner-card-img">

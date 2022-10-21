@@ -47,7 +47,6 @@ const Partners = () => {
                 badge={badge}
                 title={title}
                 subtitle={subtitle}
-                id={id}
               />
             ))}
           </div>
