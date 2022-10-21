@@ -35,12 +35,17 @@
           border-left: 2px solid #fff;
           padding-left: 0.35em;
           p {
-            font-weight: 300;
+            font-size: 0.875rem;
             text-decoration: line-through;
           }
 
           h3 {
+            font-size: 1.35rem;
             font-weight: 500;
+            span {
+              margin-left: 0.15rem;
+              font-size: 0.75rem;
+            }
           }
         }
       }
@@ -54,6 +59,7 @@
 
         .loyalty-title {
           font-size: 1.125rem;
+          font-weight: 300;
         }
 
         .loyalty-benefits {

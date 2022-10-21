@@ -8,14 +8,17 @@ const Loyalty = () => {
   ]
 
   return (
-    <div className="loyalty">
+    <section className="loyalty">
       <div className="row-container">
         <div className="loyalty-buylevel">
           <div className="loyalty-header">
             <h2>Suscribite al nivel 6</h2>
             <div className="loyalty-price">
               <p>$ 1.439</p>
-              <h3>$ 499 /mes</h3>
+              <h3>
+                $ 499
+                <span> /mes</span>
+              </h3>
             </div>
           </div>
           <div className="loyalty-body">
@@ -51,7 +54,7 @@ const Loyalty = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
