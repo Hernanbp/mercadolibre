@@ -14,6 +14,8 @@ const Home = () => {
       <Carousel />
       <Payment />
       <Recommendations />
+      <Recommendations />
+      <Recommendations />
 
       {/* if data not empty then show */}
       {data.data.length > 0 && (

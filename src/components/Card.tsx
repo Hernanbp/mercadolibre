@@ -5,7 +5,7 @@ const Card = () => {
 
   const offer = async () => {
     const response = await fetch(
-      `https://api.mercadolibre.com/sites/MLA/search?q=celular&limit=5`
+      `https://api.mercadolibre.com/sites/MLA/search?q=8&limit=5`
     )
     const data = await response.json()
     // console.log("seteando data")
