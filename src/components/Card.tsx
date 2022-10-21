@@ -40,7 +40,7 @@ const Card = () => {
             <p className="shipping">
               {shipping.free_shipping ? "Envio Gratis" : null}
             </p>
-            <div className="card-title">{title}</div>
+            <div className="card-title">{title.slice(0, 100)}</div>
           </div>
           <div className="card-bookmark"></div>
         </div>
