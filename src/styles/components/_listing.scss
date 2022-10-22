@@ -1,0 +1,110 @@
+.search-main {
+  min-height: 100vh;
+
+  .search-main-products {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.875em;
+    margin-top: 3em;
+    margin-bottom: 6em;
+
+    .search-sidebar {
+      max-width: 292px;
+      width: 100%;
+
+      .result-keyword {
+        font-size: 1.625rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: $black;
+        padding-right: 1rem;
+      }
+      .result-length {
+        font-size: 0.8rem;
+        margin-top: 0.5em;
+        letter-spacing: 0.03em;
+      }
+    }
+
+    .search-results {
+      width: 100%;
+
+      .search-options {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 1.5em;
+        margin-top: 0.5em;
+        gap: 0.5em;
+        p {
+          font-size: 0.8rem;
+          font-weight: 600;
+        }
+        span {
+          font-size: 0.8rem;
+          color: $black;
+          transition: 0.2s ease;
+
+          &:hover {
+            color: $blue;
+          }
+        }
+      }
+
+      .result-card {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-bottom: thin solid #eee;
+        padding: 20px 50px 20px 0;
+        height: 200px;
+
+        .result-img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 0 1.5em;
+          max-height: 160px;
+          max-width: 208px;
+          width: 100%;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+
+        .description {
+          display: flex;
+          flex-direction: column;
+          p {
+            font-size: 1.125rem;
+            font-weight: 300;
+            color: $black;
+            margin-bottom: 0.5em;
+          }
+          span {
+            font-size: 1.4rem;
+            color: $black;
+            font-weight: 500;
+          }
+          .installments {
+            font-size: 0.8rem;
+            color: $green;
+            font-weight: 300;
+            margin-top: 0.5em;
+          }
+
+          .free-shipping {
+            font-size: 0.8rem;
+            color: $green;
+            font-weight: 500;
+            margin-top: 0.5em;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,15 +1,18 @@
 import { useContext, useState } from "react"
+import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 import search from "../assets/search.svg"
 import DataContext from "../context/DataContext"
 
 const Search = () => {
   const [param, setParam] = useState("")
-
+  const navigate = useNavigate()
   const data = useContext(DataContext)
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
     data.getItem(param)
+    navigate(`/${param}`)
   }
 
   return (

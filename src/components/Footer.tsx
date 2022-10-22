@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <p>
-          Un clon humilde by
+          Hecho por
           <b
             style={{
               marginLeft: ".5em",

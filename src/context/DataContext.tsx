@@ -14,7 +14,7 @@ export const DataProvider = ({ children }: Props) => {
 
   const getItem = async (query: String) => {
     const response = await fetch(
-      `https://api.mercadolibre.com/sites/MLA/search?q=${query}`
+      `https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=20`
     )
     const data = await response.json()
     setData(data.results)
