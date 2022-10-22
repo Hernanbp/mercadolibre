@@ -1,6 +1,6 @@
 import Card from "./Card"
 
-const Recommendations = () => {
+const Recommendations = ({ amount }: any) => {
   return (
     <section className="recommendations">
       <div className="row-container">
@@ -9,7 +9,7 @@ const Recommendations = () => {
           <p>Ver todas</p>
         </div>
         <div className="products-display">
-          <Card />
+          <Card amount={amount} />
         </div>
       </div>
     </section>

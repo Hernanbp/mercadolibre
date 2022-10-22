@@ -1,15 +1,13 @@
 import { useEffect, useState } from "react"
 
-const Card = () => {
+const Card = ({ amount }: any) => {
   const [data, setData] = useState([] as any[])
 
   const offer = async () => {
     const response = await fetch(
-      `https://api.mercadolibre.com/sites/MLA/search?q=8&limit=5`
+      `https://api.mercadolibre.com/sites/MLA/search?q=${amount}&limit=5`
     )
     const data = await response.json()
-    // console.log("seteando data")
-    // console.log(data)
     setData(data.results)
   }
 
@@ -22,8 +20,6 @@ const Card = () => {
     currency: "ARS",
     minimumFractionDigits: 0,
   })
-
-  console.log(data[0])
 
   const content = (
     <>

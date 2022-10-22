@@ -1,10 +1,13 @@
 import { useContext } from "react"
 import Carousel from "../components/Carousel"
+import Footer from "../components/Footer"
 import Loyalty from "../components/Loyalty"
 import Navbar from "../components/Navbar"
 import Partners from "../components/Partners"
 import Payment from "../components/Payment"
 import Recommendations from "../components/Recommendations"
+import Regret from "../components/Regret"
+import ShoppingInfo from "../components/ShoppingInfo"
 import DataContext from "../context/DataContext"
 
 const Home = () => {
@@ -15,10 +18,14 @@ const Home = () => {
       <Navbar />
       <Carousel />
       <Payment />
-      <Recommendations />
-      <Recommendations />
+      <Recommendations amount={8} />
+      <Recommendations amount={5} />
       <Loyalty />
       <Partners />
+      <Recommendations amount={6} />
+      <ShoppingInfo />
+      <Regret />
+      <Footer />
 
       {/* if data not empty then show */}
       {data.data.length > 0 && (

@@ -12,7 +12,7 @@
     .products-display {
       display: grid;
       grid-template-rows: 1fr;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(224px, auto));
       gap: 1em;
       height: 365px;
     }

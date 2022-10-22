@@ -1,0 +1,68 @@
+.regret {
+  display: flex;
+  padding: 2.5em 0;
+
+  background-color: #fff;
+
+  .container {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    gap: 2.5em;
+
+    .regret-box {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+
+      p {
+        color: $blue;
+        line-height: 1.4;
+        font-size: 0.875rem;
+      }
+      .regret-title {
+        color: rgba(0, 0, 0, 0.55);
+      }
+    }
+  }
+}
+
+//footer
+
+.footer {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em 2em;
+    color: #4b4b4b;
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    p:nth-child(2) {
+      font-size: 0.875rem;
+      color: #e2e2e2;
+    }
+
+    a {
+      font-size: 0.875rem;
+      color: $blue;
+    }
+  }
+}

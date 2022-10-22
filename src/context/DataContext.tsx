@@ -18,7 +18,6 @@ export const DataProvider = ({ children }: Props) => {
     )
     const data = await response.json()
     setData(data.results)
-    console.log(data)
   }
 
   useEffect(() => {
