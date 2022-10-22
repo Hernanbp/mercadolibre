@@ -7,12 +7,18 @@ const Navbar = () => {
   const logo =
     "https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.19.5/mercadolibre/logo__large_plus.png"
 
+  const mobile =
+    "https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.19.5/mercadolibre/logo__small.png"
+
   return (
     <header className="nav-header ">
       <div className="nav-bounds">
         <div className="nav-top">
           <a className="logo" href="/">
-            <img src={logo} alt="logo" />
+            <img className="logo-dsk" src={logo} alt="logo" />
+          </a>
+          <a className="logo" href="/">
+            <img className="mobile-logo" src={mobile} alt="logo" />
           </a>
           <Search />
           <a className="ad" href="/">

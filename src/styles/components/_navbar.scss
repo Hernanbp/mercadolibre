@@ -20,6 +20,10 @@
       justify-content: space-between;
       height: 50%;
 
+      .mobile-logo {
+        display: none;
+      }
+
       .logo {
         margin-right: 2em;
       }
@@ -39,6 +43,7 @@
       .nav-adress {
         display: flex;
         gap: 0.25em;
+        align-items: center;
         border: 1px solid transparent;
         padding: 0 8px 0 8px;
         width: fit-content;
@@ -113,6 +118,83 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .header {
+    height: 80px;
+  }
+  .nav-bounds {
+    padding: 0 !important;
+
+    .logo {
+      margin: 0 !important;
+    }
+
+    .nav-top {
+      display: flex;
+      justify-content: space-between !important;
+      padding: 1em;
+      border-bottom: 1px solid $muted-yellow;
+      height: 60% !important;
+
+      .mobile-logo {
+        display: block !important;
+        padding-right: 1em;
+      }
+
+      .logo-dsk {
+        display: none;
+      }
+
+      .ad {
+        display: none;
+      }
+    }
+
+    .nav-bottom {
+      max-height: 40% !important;
+      height: 100%;
+    }
+
+    .nav-adress {
+      align-items: center;
+      margin-bottom: 5px;
+
+      &:hover {
+        border: none;
+      }
+
+      .nav-icon img {
+        padding-top: 0.25em;
+        transform: scale(0.8);
+      }
+
+      .adress {
+        flex-direction: row !important;
+        width: 100%;
+        gap: 0.25em;
+
+        p:nth-child(1) {
+          color: $black !important;
+          font-size: 0.8rem !important;
+        }
+        p:nth-child(2) {
+          color: $black;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .nav-bottom {
+      .nav-links {
+        display: none !important;
+      }
+      .nav-user {
+        display: none !important;
       }
     }
   }
