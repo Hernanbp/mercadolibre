@@ -14,6 +14,10 @@
       max-width: 292px;
       width: 100%;
 
+      .search-kw-container {
+        margin: 2.8em 0;
+      }
+
       .result-keyword {
         font-size: 1.625rem;
         text-transform: capitalize;
@@ -23,7 +27,7 @@
       }
       .result-length {
         font-size: 0.8rem;
-        margin-top: 0.5em;
+        margin-top: 0.3em;
         letter-spacing: 0.03em;
       }
     }
@@ -104,6 +108,36 @@
             margin-top: 0.5em;
           }
         }
+      }
+    }
+  }
+}
+
+.search-filters {
+  height: 100%;
+}
+.shipping {
+  margin: 0.5em;
+  margin-left: 0;
+
+  .filter-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+
+    .filter-button {
+      border: none;
+      background: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 0.8);
+
+      .filter-full {
+        display: flex;
+        flex-direction: column;
       }
     }
   }

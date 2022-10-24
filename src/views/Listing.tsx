@@ -18,10 +18,47 @@ const Listing = () => {
     <div className="search-main">
       <div className="search-main-products">
         <aside className="search-sidebar">
-          <p className="result-keyword">{id}</p>
-          <p className="result-length">
-            {data?.data.length > 0 ? data.data.length : ""} resultados
-          </p>
+          <div className="search-kw-container">
+            <p className="result-keyword">{id}</p>
+            <p className="result-length">
+              {data?.data.length > 0 ? data.data.length : ""} resultados
+            </p>
+          </div>
+          <section className="search-filters">
+            <div className="shipping">
+              <form className="filter-container">
+                <button type="submit" className="filter-button">
+                  <span>Llegan hoy</span>
+                </button>
+                <div className="switch-container">
+                  <input type="checkbox" />
+                </div>
+              </form>
+            </div>
+            <div className="shipping">
+              <form className="filter-container">
+                <button type="submit" className="filter-button">
+                  <p className="filter-full">
+                    <span>te ahorra envios</span>
+                    <span>Con tu carrito de compras</span>
+                  </p>
+                </button>
+                <div className="switch-container">
+                  <input type="checkbox" />
+                </div>
+              </form>
+            </div>
+            <div className="shipping">
+              <form className="filter-container">
+                <button type="submit" className="filter-button">
+                  <span>Envio gratis</span>
+                </button>
+                <div className="switch-container">
+                  <input type="checkbox" />
+                </div>
+              </form>
+            </div>
+          </section>
         </aside>
         <section className="search-results">
           {data.data.length > 0 && (

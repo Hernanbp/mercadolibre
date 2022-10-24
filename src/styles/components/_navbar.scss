@@ -49,6 +49,7 @@
         width: fit-content;
         border-radius: 4px;
         height: 40px;
+        cursor: pointer;
 
         &:hover {
           border: 1px solid $muted-yellow;
@@ -91,6 +92,7 @@
           li {
             font-size: 0.8rem;
             color: $muted-grey;
+            cursor: pointer;
           }
         }
       }
@@ -110,6 +112,7 @@
           li {
             font-size: 0.8rem;
             color: $black;
+            cursor: pointer;
 
             &:last-child {
               position: absolute;
