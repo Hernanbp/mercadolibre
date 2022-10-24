@@ -1,3 +1,5 @@
+import useResize from "../hooks/useResize"
+
 const Payment = () => {
   const credito =
     "https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/credit-card.svg"
@@ -10,6 +12,9 @@ const Payment = () => {
     "https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/payment-agreement.svg"
   const payment =
     "https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/view-more.svg"
+
+  const { width } = useResize()
+  console.log(width)
 
   const content = (
     <section className="payment-data">
@@ -32,22 +37,26 @@ const Payment = () => {
                 <div className="payment-data-subtitle">Ver más</div>
               </div>
             </div>
-            <div className="payment-data-section">
-              <img src={cuotas} alt="ico" />
-              <div className="payment-data-titles">
-                <div className="payment-data-title">Cuotas sin tarjeta</div>
-                <div className="payment-data-subtitle">
-                  Conocé Mercado Crédito
+            {width !== undefined && width < 849 ? null : (
+              <>
+                <div className="payment-data-section">
+                  <img src={cuotas} alt="ico" />
+                  <div className="payment-data-titles">
+                    <div className="payment-data-title">Cuotas sin tarjeta</div>
+                    <div className="payment-data-subtitle">
+                      Conocé Mercado Crédito
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-            <div className="payment-data-section">
-              <img src={efectivo} alt="ico" />
-              <div className="payment-data-titles">
-                <div className="payment-data-title">Efectivo</div>
-                <div className="payment-data-subtitle">Ver más</div>
-              </div>
-            </div>
+                <div className="payment-data-section">
+                  <img src={efectivo} alt="ico" />
+                  <div className="payment-data-titles">
+                    <div className="payment-data-title">Efectivo</div>
+                    <div className="payment-data-subtitle">Ver más</div>
+                  </div>
+                </div>
+              </>
+            )}
           </div>
 
           {/* + button */}

@@ -67,3 +67,12 @@
     }
   }
 }
+
+@media (max-width: 820px) {
+  .carousel-container {
+    height: 255px;
+    .carousel {
+      background-size: cover;
+    }
+  }
+}
