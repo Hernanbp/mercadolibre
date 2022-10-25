@@ -36,12 +36,15 @@ const Listing = () => {
               </form>
             </div>
             <div className="shipping">
-              <form className="filter-container">
+              <form className="filter-container f-full">
                 <button type="submit" className="filter-button">
-                  <p className="filter-full">
-                    <span>te ahorra envios</span>
-                    <span>Con tu carrito de compras</span>
-                  </p>
+                  <div className="filter-full">
+                    <p className="full">
+                      <span>FULL</span>
+                      te ahorra envios
+                    </p>
+                    <p>Con tu carrito de compras</p>
+                  </div>
                 </button>
                 <div className="switch-container">
                   <input type="checkbox" />
@@ -57,6 +60,20 @@ const Listing = () => {
                   <input type="checkbox" />
                 </div>
               </form>
+            </div>
+            <div className="filter">
+              <h4>Condición</h4>
+              <p>Nuevo</p>
+              <p>Usado</p>
+              <p>Reacondicionado</p>
+            </div>
+            <div className="filter">
+              <h4>Pago</h4>
+              <p>Cuotas sin interés</p>
+            </div>
+            <div className="filter">
+              <h4>Costo de envío</h4>
+              <p>Gratis</p>
             </div>
           </section>
         </aside>
