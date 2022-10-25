@@ -182,3 +182,12 @@
     padding: 1.15em;
   }
 }
+
+//ipad air media query
+@media (max-width: 820px) {
+  .search-main {
+    .search-main-products {
+      padding: 0 1em;
+    }
+  }
+}

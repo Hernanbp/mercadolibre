@@ -23,7 +23,7 @@ const Search = () => {
         type="text"
         placeholder="Buscar productos, marcas y mas..."
       />
-      <button type="submit">
+      <button className="search-btn" type="submit">
         <img src={search} alt="search" />
       </button>
     </form>
