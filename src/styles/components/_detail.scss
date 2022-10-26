@@ -1,0 +1,92 @@
+.detail-wrapper {
+  min-height: 100vh;
+
+  .detail-container {
+    background: #fff;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 hsla(0, 0%, 0%, 0.25);
+    margin-bottom: 24px;
+    margin-top: 24px;
+    min-width: 800px;
+    padding: 1rem;
+
+    .detail-top {
+      display: flex;
+      justify-content: space-between;
+
+      .detail-images {
+        width: 40%;
+      }
+      .detail-heading {
+        width: 32%;
+      }
+      .detail-actions {
+        width: 28%;
+
+        &-buy {
+          border: 1px solid rgba(0, 0, 0, 0.1);
+          -webkit-border-radius: 8px;
+          border-radius: 8px;
+          font-size: 0.875rem;
+          padding: 1.15rem 1rem;
+          width: 100%;
+
+          .arrive-free {
+            color: $green;
+            font-weight: 500;
+            font-size: 1rem;
+          }
+
+          .detail-shipp-adress {
+            color: $blue;
+          }
+
+          .detail-actions-seller {
+            margin-top: 1.5em;
+
+            p:nth-child(1) {
+              span {
+                color: $blue;
+              }
+            }
+          }
+          .detail-stock {
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 1.5em 0;
+          }
+          .detail-quantity {
+            font-size: 1rem;
+            margin-bottom: 1.5em;
+          }
+          .detail-actions-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5em;
+            .buynow {
+              background-color: $blue;
+              border: none;
+              border-radius: 6px;
+              padding: 1rem 1.25em;
+              color: #fff;
+              font-size: 0.9rem;
+              font-weight: 600;
+            }
+            .addtocart {
+              background-color: rgba(65, 137, 230, 0.15);
+              border: none;
+              border-radius: 6px;
+              padding: 1rem 1.25em;
+              color: $blue;
+              font-size: 0.9rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}

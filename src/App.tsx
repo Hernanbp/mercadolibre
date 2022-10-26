@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar"
 import { DataProvider } from "./context/DataContext"
 import Home from "./views/Home"
 import Listing from "./views/Listing"
+import ProductDetail from "./views/ProductDetail"
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/:id" element={<Listing />} />
+        <Route path="/detail/:id" element={<ProductDetail />} />
       </Routes>
       <Footer />
     </DataProvider>
