@@ -22,6 +22,12 @@
       }
       .detail-heading {
         width: 32%;
+        padding-top: 1.5em;
+
+        &-condition {
+          font-size: 0.875rem;
+          color: $grey;
+        }
       }
       .detail-actions {
         width: 28%;

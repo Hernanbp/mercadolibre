@@ -5,7 +5,7 @@ const Detail = () => {
         <section className="detail-top">
           <div className="detail-images">a</div>
           <div className="detail-heading">
-            <p>Nuevo / 118 vendidos</p>
+            <p className="detail-heading-condition">Nuevo / 118 vendidos</p>
             <h2>Airpods Pro Max</h2>
             <div className="rating"></div>
             <h2>$ 15.115</h2>
