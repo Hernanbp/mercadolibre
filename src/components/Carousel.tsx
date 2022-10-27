@@ -41,6 +41,11 @@ const Carousel = () => {
       id: 7,
       active: false,
     },
+    {
+      url: "https://http2.mlstatic.com/D_NQ_821718-MLA52149846786_102022-OO.webp",
+      id: 8,
+      active: false,
+    },
   ])
 
   const onMouseOver = () => {

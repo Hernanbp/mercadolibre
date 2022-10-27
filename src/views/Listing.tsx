@@ -1,6 +1,6 @@
 import DataContext from "../context/DataContext"
 import { useContext } from "react"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 const Listing = () => {
   const data = useContext(DataContext)
@@ -13,6 +13,12 @@ const Listing = () => {
     currency: "ARS",
     minimumFractionDigits: 0,
   })
+
+  const navigate = useNavigate()
+
+  const itemDetails = (id: any) => {
+    navigate(`/item/${id}`)
+  }
 
   return (
     <div className="search-main">
@@ -86,7 +92,11 @@ const Listing = () => {
           )}
           {data.data.length > 0 ? (
             data.data.map((item: any) => (
-              <div className="result-card" key={item.id}>
+              <div
+                onClick={() => itemDetails(item.id)}
+                className="result-card"
+                key={item.id}
+              >
                 <div className="result-img">
                   <img src={item.thumbnail} alt={item.title} />
                 </div>

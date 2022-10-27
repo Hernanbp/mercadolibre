@@ -18,15 +18,80 @@
       justify-content: space-between;
 
       .detail-images {
+        display: flex;
         width: 40%;
+
+        .thumbnails {
+          display: flex;
+          flex-direction: column;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            li {
+              list-style: none;
+              border: 1px solid #b2b5b8;
+              border-radius: 4px;
+              width: 50px;
+              height: 50px;
+              padding: 0.1rem;
+              cursor: pointer;
+
+              &:hover {
+                border: 1px solid transparent;
+                outline: 2px solid $blue;
+              }
+
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
+          }
+        }
+
+        .current-image {
+          padding: 1em;
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
       }
       .detail-heading {
         width: 32%;
         padding-top: 1.5em;
+        padding-right: 2em;
 
         &-condition {
-          font-size: 0.875rem;
-          color: $grey;
+          font-size: 0.8rem;
+          color: #0000008c;
+          margin-bottom: 0.5em;
+        }
+
+        .item-title {
+          font-size: 1.375rem;
+          font-weight: 500;
+          margin-top: 0.5em;
+        }
+
+        .item-price {
+          font-size: 2.25rem;
+          font-weight: 300;
+          color: #000000e6;
+          margin-top: 1em;
+        }
+        .item-installments {
+          font-size: 1.125rem;
+        }
+        .item-paymentMethods {
+          color: $blue;
+          font-size: 0.8rem;
+          margin-top: 0.5em;
         }
       }
       .detail-actions {
@@ -67,6 +132,10 @@
           .detail-quantity {
             font-size: 1rem;
             margin-bottom: 1.5em;
+            span {
+              color: #0000008c;
+              font-size: 0.875rem;
+            }
           }
           .detail-actions-buttons {
             display: flex;
@@ -89,6 +158,19 @@
               color: $blue;
               font-size: 0.9rem;
               font-weight: 600;
+            }
+          }
+          .benefits {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            margin-top: 1.5em;
+            font-size: 0.875rem;
+            p {
+              color: $blue;
+              span {
+                color: #0000008c;
+              }
             }
           }
         }
