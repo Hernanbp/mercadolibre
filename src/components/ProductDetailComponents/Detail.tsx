@@ -1,6 +1,7 @@
 import { useEffect, useContext, useState } from "react"
 import { useParams } from "react-router-dom"
 import DataContext from "../../context/DataContext"
+import ReactImageMagnify from "react-image-magnify"
 
 const Detail = () => {
   const [item, setItem] = useState<any>({})
@@ -40,8 +41,8 @@ const Detail = () => {
           <div className="detail-images">
             <div className="thumbnails">
               <ul>
-                {pic?.map((pic: any) => (
-                  <li>
+                {pic?.map((pic: any, index: any) => (
+                  <li key={index}>
                     <img src={pic} alt="" />
                   </li>
                 ))}
@@ -49,14 +50,38 @@ const Detail = () => {
             </div>
             <div className="current-image">
               {/* set current image from api */}
-              <img src={pic} alt="" />
+              <ReactImageMagnify
+                lensStyle={{
+                  background: "#37373751",
+                  width: "100px",
+                  height: "500px",
+                }}
+                {...{
+                  smallImage: {
+                    alt: "Wristwatch by Ted Baker London",
+                    isFluidWidth: true,
+                    src: pic,
+                  },
+                  largeImage: {
+                    src: pic,
+                    width: 1200,
+                    height: 1800,
+                  },
+                  enlargedImageContainerDimensions: {
+                    width: "180%",
+                    height: "150%",
+                  },
+
+                  shouldUsePositiveSpaceLens: true,
+                }}
+              />
             </div>
           </div>
           <div className="detail-heading">
             <p className="detail-heading-condition">
               {item.condition === "new" && "Nuevo "}{" "}
               {item.sold_quantity > 0
-                ? ` / ${item.sold_quantity} vendidos`
+                ? `  |  ${item.sold_quantity} vendidos`
                 : null}
             </p>
             <h2 className="item-title">{item.title}</h2>
