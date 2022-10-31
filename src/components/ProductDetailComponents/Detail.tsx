@@ -7,7 +7,6 @@ const Detail = () => {
   const [item, setItem] = useState<any>({})
 
   const data = useContext(DataContext)
-  // console.log(data)
 
   const params = useParams()
   const { id } = params
@@ -15,7 +14,6 @@ const Detail = () => {
   const getItemById = async (id: any) => {
     const response = await fetch(`https://api.mercadolibre.com/items/${id}`)
     const data = await response.json()
-    // console.log(data)
     setItem(data)
   }
 
@@ -131,6 +129,157 @@ const Detail = () => {
                   <span>Sumás 2307 puntos.</span>
                 </p>
               </div>
+            </div>
+
+            <div className="detail-actions-buy">
+              <p className="detail-actions-title">
+                Información sobre el vendedor
+              </p>
+              <div className="detail-actions-seller">
+                <p className="seller-category">
+                  <span>
+                    <img
+                      src="https://http2.mlstatic.com/frontend-assets/vpp-frontend/medal.svg"
+                      alt=""
+                    />
+                  </span>
+                  MercadoLíder Platinum
+                </p>
+                <p className="seller-best">¡Es uno de los mejores del sitio!</p>
+              </div>
+              <div className="detail-bars">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+              </div>
+              <div className="seller-stats">
+                <div className="total-sales">
+                  <h2>1923</h2>
+                  <p>Ventas en los últimos 60 días</p>
+                </div>
+                <div className="atenttion">
+                  <img
+                    src="https://http2.mlstatic.com/frontend-assets/vpp-frontend/message-positive.svg"
+                    alt=""
+                  />
+                  <p>Brinda buena atención</p>
+                </div>
+                <div className="delivery-time">
+                  <img
+                    src="https://http2.mlstatic.com/frontend-assets/vpp-frontend/time-positive.svg"
+                    alt=""
+                  />
+                  <p>
+                    Despacha sus productos a <br /> tiempo
+                  </p>
+                </div>
+              </div>
+              <p className="seller-more">Ver más datos de este vendedor</p>
+            </div>
+
+            <div className="detail-actions-buy">
+              <p className="detail-payment-title">Medios de pago</p>
+              <div className="payment-mp">
+                <p className="detail-payment-subtitle">
+                  Hasta 12 cuotas sin tarjeta
+                </p>
+                <img
+                  src="https://http2.mlstatic.com/storage/logos-api-admin/51b446b0-571c-11e8-9a2d-4b2bd7b1bf77-m.svg"
+                  alt=""
+                />
+              </div>
+              <div className="payment-credit">
+                <p className="detail-payment-subtitle">Tarjetas de crédito</p>
+                <p className="detail-body">
+                  ¡Cuotas sin interés con bancos <br /> seleccionados!
+                </p>
+                <div className="payment-credit-cards">
+                  <ul className="payment-credit-cards-list">
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/a5f047d0-9be0-11ec-aad4-c3381f368aaf-m.svg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/b2c93a40-f3be-11eb-9984-b7076edb0bb7-m.svg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/992bc350-f3be-11eb-826e-6db365b9e0dd-m.svg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/aa2b8f70-5c85-11ec-ae75-df2bef173be2-m.svg"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="payment-credit">
+                <p className="detail-payment-subtitle">Tarjetas de débito</p>
+                <div className="payment-credit-cards">
+                  <ul
+                    style={{ flexWrap: "wrap", maxWidth: "250px" }}
+                    className="payment-credit-cards-list"
+                  >
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/312238e0-571b-11e8-823a-758d95db88db-m.svg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/ce454480-445f-11eb-bf78-3b1ee7bf744c-m.svg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/157dce60-571b-11e8-95d8-631c1a9a92a9-m.svg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/cb0af1c0-f3be-11eb-8e0d-6f4af49bf82e-m.svg"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="payment-credit">
+                <p className="detail-payment-subtitle">Efectivo</p>
+                <div className="payment-credit-cards">
+                  <ul className="payment-credit-cards-list">
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/fec5f230-06ee-11ea-8e1e-273366cc763d-m.svg"
+                        alt=""
+                      />
+                    </li>
+                    <li>
+                      <img
+                        src="https://http2.mlstatic.com/storage/logos-api-admin/443c34d0-571b-11e8-823a-758d95db88db-m.svg"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p className="seller-more">Conocé otros medios de pago</p>
             </div>
           </aside>
         </section>
